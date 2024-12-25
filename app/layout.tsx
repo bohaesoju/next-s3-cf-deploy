@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: '크리스마스 카드 - 사랑하는 아내에게',
     description: '당신에게 전하는 특별한 크리스마스 메시지',
     images: [{
-      url: '/og-image.jpg',
+      url: 'https://dahyun.shop/og-image.jpg',
       width: 1200,
       height: 630,
       alt: '크리스마스 카드 이미지',
