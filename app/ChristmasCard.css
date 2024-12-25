@@ -1,0 +1,28 @@
+@keyframes fall {
+    0% { 
+      transform: translateY(-100vh) rotate(0deg); 
+    }
+    100% { 
+      transform: translateY(100vh) rotate(360deg); 
+    }
+  }
+  
+  .animate-fall {
+    animation: fall linear infinite;
+  }
+  
+  .rotate-y-10 {
+    transform: rotateY(10deg);
+  }
+  
+  .rotate-x-5 {
+    transform: rotateX(5deg);
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .perspective {
+    perspective: 1000px;
+  }

@@ -166,3 +166,62 @@ a.secondary {
     filter: invert();
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e63946, #f1faee);
+  color: #1d3557;
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-header {
+  background: #457b9d;
+  color: white;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.card-footer {
+  background: #a8dadc;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #d62828;
+}
