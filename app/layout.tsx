@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
+
+const notoSansKr = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-noto-sans-kr",
+});
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,16 +21,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '크리스마스 카드 - 사랑하는 아내에게',
-  description: '당신에게 전하는 특별한 크리스마스 메시지',
+  title: '크리스마스 카드 - 사랑하는 아내 다현 에게',
+  description: '유안이 엄마에게 전하는 크리스마스 메시지',
   openGraph: {
-    title: '크리스마스 카드 - 사랑하는 아내에게',
-    description: '당신에게 전하는 특별한 크리스마스 메시지',
+    title: '크리스마스 카드 - 사랑하는 아내 다현 에게',
+    description: '유안이 엄마에게 전하는 크리스마스 메시지',
     images: [{
       url: 'https://dahyun.shop/og-image.jpg',
       width: 1200,
       height: 630,
-      alt: '크리스마스 카드 이미지',
+      alt: '유안이네 가족사진',
     }],
     locale: 'ko_KR',
     type: 'website',
@@ -39,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="ko">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKr.variable}`}>
         {children}
       </body>
     </html>
