@@ -2,13 +2,18 @@
 import { useEffect, useState } from "react";
 import './ChristmasCard.css';
 
+interface Snowflake {
+  id: number;
+  left: string;
+  animationDuration: string;
+  delay: string;
+}
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
-  const [snowflakes, setSnowflakes] = useState([]);
-  const [ornaments, setOrnaments] = useState([]);
+  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
   const [isClient, setIsClient] = useState(false);
 
-  // 클라이언트 사이드 렌더링 체크
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -25,22 +30,6 @@ export default function Home() {
         }));
       };
       setSnowflakes(generateSnowflakes());
-    }
-  }, [isClient]);
-
-  // 트리 장식 초기화
-  useEffect(() => {
-    if (isClient) {
-      const colors = ['#ff0000', '#ffd700', '#ff69b4', '#4169e1'];
-      const generateOrnaments = () => {
-        return Array.from({ length: 12 }, (_, i) => ({
-          id: i,
-          left: `${Math.random() * 80 + 10}%`,
-          top: `${Math.random() * 80 + 10}%`,
-          color: colors[Math.floor(Math.random() * colors.length)]
-        }));
-      };
-      setOrnaments(generateOrnaments());
     }
   }, [isClient]);
 
