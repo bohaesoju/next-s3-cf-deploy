@@ -2,10 +2,6 @@
 
 이 프로젝트는 GitHub Actions를 활용하여 Next.js 애플리케이션을 AWS에 자동으로 배포합니다. **S3**를 이용한 정적 파일 호스팅, **CloudFront**를 활용한 콘텐츠 전송, **ACM(AWS Certificate Manager)**을 통한 SSL 인증 설정으로 안전하고 확장 가능한 배포 파이프라인을 제공합니다.
 
-## 🌐 프로젝트 URL
-
-[https://dahyun.shop/](https://dahyun.shop/)
-
 ---
 
 ## 🚀 주요 기능
